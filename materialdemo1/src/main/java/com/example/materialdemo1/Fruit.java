@@ -1,5 +1,7 @@
 package com.example.materialdemo1;
 
+import java.io.Serializable;
+
 /**
  * @ProjectName: MaterialTest
  * @Package: com.example.materialdemo1
@@ -11,7 +13,7 @@ package com.example.materialdemo1;
  * @UpdateRemark:
  * @Version: 1.0
  */
-public class Fruit {
+public class Fruit implements Serializable{
     private String name;
     private int src;
 

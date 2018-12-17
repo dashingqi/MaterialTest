@@ -1,6 +1,7 @@
 package com.example.materialdemo1;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -54,7 +55,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         viewHolder.mCarView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mContext, fruit.getName(), Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(mContext, FruitActivity.class);
+                intent.putExtra("fruit",fruit);
+                mContext.startActivity(intent);
             }
         });
 
